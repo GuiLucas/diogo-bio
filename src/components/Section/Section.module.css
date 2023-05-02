@@ -1,0 +1,155 @@
+.header {
+    text-align: center;
+    padding: 24px;
+    font-size: 3rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.headerContainer::after {
+    --line-width: 1px;
+    --line-gap: 5px;
+    --line-color: rgba(0,0,0,calc(0.15 * 3));
+    --background: #FFF;
+    --fade-stop: 90%;
+    --offset: -100px;
+
+    width: calc(100% + var(--offset));
+
+
+    content: '';
+    position: absolute;
+    left: calc(var(--offset) / 2 * -1);
+    /* width: 100%; */
+    height: var(--line-width);
+    background: linear-gradient(to right,var(--line-color),var(--line-color) 50%,transparent 0,transparent);
+    background-size: var(--line-gap) var(--line-width);
+    mask-composite: exclude;
+    mask: 
+        linear-gradient(
+        to left,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(
+        to right,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(black, black);
+}
+
+.headerContainer::before {
+    --line-width: 1px;
+    --line-gap: 5px;
+    --line-color: rgba(0,0,0,calc(0.15 * 3));
+    --background: #FFF;
+    --fade-stop: 90%;
+    --offset: -100px;
+
+    width: calc(100% + var(--offset));
+
+
+    content: '';
+    position: absolute;
+    left: calc(var(--offset) / 2 * -1);
+    /* width: 100%; */
+    height: var(--line-width);
+    background: linear-gradient(to right,var(--line-color),var(--line-color) 50%,transparent 0,transparent);
+    background-size: var(--line-gap) var(--line-width);
+    mask-composite: exclude;
+    mask: 
+        linear-gradient(
+        to left,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(
+        to right,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(black, black);
+}
+
+.subSectionContainer {
+    padding: 48px;
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, auto );
+    grid-template-rows: repeat(var(--rows), auto);
+}
+
+.subSection {
+    padding: 0.5rem 2rem;
+    grid-area: calc(var(--row-index) + 1) 
+        / calc(var(--col-index) + 1) 
+        / calc(var(--row-index) + 2) 
+        / calc(var(--col-index) + 2);
+}
+
+/* .gridContainer::before {
+    --line-width: 1px;
+    --line-gap: 5px;
+    --line-color: rgba(0,0,0,calc(0.15 * 3));
+    --background: #FFF;
+    --fade-stop: 90%;
+    --offset: 0px;
+ 
+    content: '';
+    position: absolute;
+    top: calc(var(--offset) / 2 * -1);
+    height: calc(100% + var(--offset));
+    width: var(--line-width);
+    background: linear-gradient(to bottom,var(--line-color),var(--line-color) 50%,transparent 0,transparent);
+    background-size: var(--line-width) var(--line-gap);
+
+    mask-composite: exclude;
+    mask: 
+        linear-gradient(
+        to top,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(
+        to bottom,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(black, black);
+} */
+
+/* .gridContainer::after {
+    --line-width: 1px;
+    --line-gap: 5px;
+    --line-color: rgba(0,0,0,calc(0.15 * 3));
+    --background: #FFF;
+    --fade-stop: 90%;
+    --offset: -100px;
+ 
+    content: '';
+    position: absolute;
+    height: calc(100% + var(--offset));
+    width: var(--line-width);
+    background: linear-gradient(to bottom,var(--line-color),var(--line-color) 50%,transparent 0,transparent);
+    background-size: var(--line-width) var(--line-gap);
+
+    mask-composite: exclude;
+    mask: 
+        linear-gradient(
+        to top,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(
+        to bottom,
+        var(--background) var(--fade-stop),
+        transparent
+        ),
+        linear-gradient(black, black);
+} */
+
+

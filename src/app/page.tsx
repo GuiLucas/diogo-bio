@@ -1,5 +1,6 @@
 import { BandsSection, Section, Circle } from 'components'
 import { Provider } from 'react-wrap-balancer'
+import { Analytics } from '@vercel/analytics/react';
 import * as Data from 'data'
 
 import styles from './page.module.css'
@@ -31,6 +32,7 @@ const Home = () => {
 				</a>
 			</p>
 		</footer>
+		<Analytics />
 	</Provider>
 }
 

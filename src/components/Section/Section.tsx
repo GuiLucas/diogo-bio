@@ -1,9 +1,11 @@
-import type * as Resources from "../../resources"
+import type * as Types from "types"
+import Balancer from 'react-wrap-balancer'
+
 import styles from './Section.module.css'
 
 type SectionProps = {
     title: string
-    data: Resources.Exhibition[]
+    data: Types.Entry[]
 }
 
 export const Section = (props: SectionProps) => {
@@ -12,14 +14,12 @@ export const Section = (props: SectionProps) => {
         data
     } = props
 
-    const rowContainer = { "--rows": data.length } as React.CSSProperties
-
     const lineWidth = '1px'
     const lineGap = '5px'
     const lineColor = 'rgba(0,0,0,calc(0.15 * 3))'
 
-    return <section style={{ height: 'fit-content' }}>
-        <div style={
+    return <section className={styles['section']}>
+        {/* <div style={
             {
                 position: 'relative',
                 height: '100%',
@@ -28,62 +28,46 @@ export const Section = (props: SectionProps) => {
                 background: `linear-gradient(to bottom,${lineColor},${lineColor} 50%,transparent 0,transparent)`,
                 backgroundSize: `${lineWidth} ${lineGap}`
             }
-        }></div>
+        }></div> */}
         <div className={styles['headerContainer']}>
-            <h2 className={styles['header']}>{title}</h2>
+            <AnimatedHeader title={title} />
         </div>
-
-        <div className={styles['subSectionContainer']}>
-            <div className={styles['gridContainer']} style={rowContainer}>
-                {
-                    data.map(
-                        (exibition, index) => {
-                            return <>
-                                <div
-                                    className={styles['subSection']}
-                                    style={{ "--row-index": index + 1, '--col-index': 0 } as React.CSSProperties}
-                                >
-                                    {exibition.year}
-                                </div>
-                                <div
-                                    className={styles['subSection']}
-                                    style={{ "--row-index": index + 1, '--col-index': 1 } as React.CSSProperties}
-                                >
-                                    <strong>{exibition.name}</strong>
-                                </div>
+        <div className={styles['sectionContent']}>
+            {
+                data.map(
+                    entry => {
+                        return <div className={styles['entryContainer']}>
+                            <strong>
                                 {
-                                    exibition.team
-                                        ? <div
-                                            className={styles['subSection']}
-                                            style={{ "--row-index": index + 1, '--col-index': 2 } as React.CSSProperties}
-                                        >
-                                            {exibition.team}
-                                        </div>
-                                        : null
+                                    entry.balance
+                                        ? <Balancer>
+                                            {entry.name}
+                                        </Balancer>
+                                        : <span>{entry.name}</span>
                                 }
-                                {
-                                    exibition.location
-                                        ? <div
-                                            className={styles['subSection']}
-                                            style={{ "--row-index": index + 1, '--col-index': 3 } as React.CSSProperties}
-                                        >
-                                            {exibition.location}
-                                        </div>
-                                        : null
-                                }
-                                {/* <div
-                                    className={styles['subSection']}
-                                    style={{ "--row-index": index + 1, '--col-index': 4 } as React.CSSProperties}
-                                >
-                                    {exibition.city}
-                                </div> */}
-                            </>
-                        }
-                    )
-                }
-            </div>
+                            </strong>
+                            {
+                                entry.team
+                                    ?
+                                    entry.balance
+                                        ? <Balancer>
+                                            {entry.team}
+                                        </Balancer>
+                                        : <span>{entry.team}</span>
+                                    : null
+                            }
+                            {
+                                entry.location
+                                    ? <span>{entry.location}</span>
+                                    : null
+                            }
+                            <span>{entry.year}</span>
+                        </div>
+                    }
+                )
+            }
         </div>
-        <div style={
+        {/* <div style={
             {
                 position: 'relative',
                 height: '100%',
@@ -93,6 +77,62 @@ export const Section = (props: SectionProps) => {
                 background: `linear-gradient(to bottom,${lineColor},${lineColor} 50%,transparent 0,transparent)`,
                 backgroundSize: `${lineWidth} ${lineGap}`
             }
-        }></div>
+        }></div> */}
     </section >
+}
+
+type BandsSectionProps = {
+    title: string,
+    data: string[]
+}
+
+// Idea for bands, have names moving in from the left and leaving on right. Always moving, see guy on twitter vercel for that effect
+export const BandsSection = (props: BandsSectionProps) => {
+    const {
+        title,
+        data
+    } = props
+
+    return <section className={styles['section']}>
+        <div className={styles['headerContainer']}>
+            <AnimatedHeader title={title} />
+        </div>
+        <div className={styles['bandsContainer']}>
+            {
+                data.map(
+                    (band, index) => {
+                        return <span
+                            key={`${band}-${index}`}
+                            style={{ "--band-index": index } as React.CSSProperties}
+                            className={styles['bandContainer']}
+                        >
+                            <strong>{band}</strong>
+                        </span>
+                    }
+                )
+            }
+        </div>
+    </section >
+}
+
+type AnimatedHeader = {
+    title: string
+}
+
+function AnimatedHeader(props: AnimatedHeader) {
+    const { title } = props
+    return <div className={styles['scrollContainer']}>
+        <div className={styles['scrollContent']}>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+            <h2 className={styles['header']}>{title}</h2>
+        </div>
+    </div>
 }

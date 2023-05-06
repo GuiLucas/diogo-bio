@@ -1,21 +1,21 @@
-import type * as Resources from '../src/resources'
+import type * as Types from './types'
 
-export const Architectural: Resources.Exhibition[] = [
+export const Architectural: Types.Entry[] = [
     {
 		year: '2023',
 		name: 'IGREJA DA MISERICÓRDIA DE GUIMARÃES',
 		team: 'with Carlos A. Correia',
 		location: 'Igreja da Misericórdia de Guimarães',
 		city: 'Guimarães, PT',
-		type: 'ARCHITECTURAL LIGHTING DESIGN'
+		type: 'ARCHITECTURAL LIGHTING DESIGN',
+		balance: true
 	}
 ]
-
-export const Instalations: Resources.Exhibition[] = [
+export const Instalations: Types.Entry[] = [
 	{
 		year: '2023',
 		name: 'DEUX EX HOMO EX MACHINA',
-		team: 'solo exhibition',
+		team: undefined,
 		location: 'Une Affaire Électronique Festival',
 		city: 'Guimarães, PT',
 		type: 'INSTALLATION'
@@ -23,7 +23,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2023',
 		name: 'SELF_PORTRAIT_001',
-		team: 'group exhibition',
+		team: undefined,
 		location: 'Primeira - open studio',
 		city: 'Porto, PT',
 		type: 'INSTALLATION'
@@ -31,7 +31,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2022',
 		name: '#FFA500',
-		team: 'solo exhibition',
+		team: undefined,
 		location: 'Fenda - Festival de Arte Urbana',
 		city: 'Braga, PT',
 		type: 'INSTALLATION'
@@ -47,7 +47,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2022',
 		name: 'ESTENDAL',
-		team: 'solo exhibition',
+		team: undefined,
 		location: 'Parallax - Diário de Bordo',
 		city: 'Porto, PT',
 		type: 'INSTALLATION'
@@ -71,7 +71,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2021',
 		name: 'OBSERVE/ABSORV',
-		team: 'solo exhibition',
+		team: undefined,
 		location: 'Fenda - Festival de Arte Urbana',
 		city: 'Braga, PT',
 		type: 'INSTALLATION'
@@ -79,7 +79,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2021',
 		name: 'ASSYNCHROUNOUS 1.0',
-		team: 'group exhibition',
+		team: undefined,
 		location: 'Casa Varela',
 		city: 'Pombal, PT',
 		type: 'INSTALLATION'
@@ -90,12 +90,13 @@ export const Instalations: Resources.Exhibition[] = [
 		team: 'with Rui Souza and Rolando Ferreira',
 		location: 'C.Ciência Viva, Fraterna',
 		city: 'Guimarães, PT',
-		type: 'INSTALLATION'
+		type: 'INSTALLATION',
+		balance: true
 	},
 	{
 		year: '2020',
 		name: 'SENSITIVE CONTENT',
-		team: 'solo exhibition',
+		team: undefined,
 		location: 'Galeria Birra',
 		city: 'Porto, PT',
 		type: 'INSTALLATION'
@@ -103,7 +104,7 @@ export const Instalations: Resources.Exhibition[] = [
 	{
 		year: '2020',
 		name: 'ENTROPIA',
-		team: 'group exhibition',
+		team: undefined,
 		location: 'gnration',
 		city: 'Braga, PT',
 		type: 'INSTALLATION'
@@ -117,13 +118,12 @@ export const Instalations: Resources.Exhibition[] = [
 		type: 'INSTALLATION'
 	}
 ]
-
-export const LiveAvPerformance: Resources.Exhibition[] = [
+export const LiveAvPerformance: Types.Entry[] = [
     {
 		year: '2021-2022',
 		name: 'MIRA QUEBEC & DIOGO MENDES',
 		team: 'with Mira Quebec',
-		location: 'Tour',
+		location: undefined,
 		city: 'Portugal',
 		type: 'LIVE AV PERFORMANCE'
 	},
@@ -131,9 +131,10 @@ export const LiveAvPerformance: Resources.Exhibition[] = [
 		year: '2021',
 		name: 'RITO OU RITA',
 		team: 'with Rui Gaspar, Pedro Marques and Surma',
-		location: 'Tour',
+		location: undefined,
 		city: 'Portugal',
-		type: 'LIVE AV PERFORMANCE'
+		type: 'LIVE AV PERFORMANCE',
+		balance: true
 	},
 	{
 		year: '2020',
@@ -141,7 +142,8 @@ export const LiveAvPerformance: Resources.Exhibition[] = [
 		team: 'with Surma, João Hasselberg and Pedro Melo Alves',
 		location: 'Convento de São Francisco',
 		city: 'Coimbra, PT',
-		type: 'LIVE AV PERFORMANCE'
+		type: 'LIVE AV PERFORMANCE',
+		balance: true
 	},
 	{
 		year: '2018',
@@ -152,8 +154,7 @@ export const LiveAvPerformance: Resources.Exhibition[] = [
 		type: 'LIVE AV PERFORMANCE'
 	}
 ]
-
-export const Scenography: Resources.Exhibition[] = [
+export const Scenography: Types.Entry[] = [
     {
 		year: '2023',
 		name: 'TREAT YOUR SELF!',
@@ -163,8 +164,7 @@ export const Scenography: Resources.Exhibition[] = [
 		type: 'SCENOGRAPHY'
 	}
 ]
-
-export const SetDesign: Resources.Exhibition[] = [
+export const SetDesign: Types.Entry[] = [
     {
 		year: '2022',
 		name: 'GONGORI',
@@ -199,54 +199,31 @@ export const SetDesign: Resources.Exhibition[] = [
 	},
 ]
 
-
-export const LightAndStage: Resources.Exhibition[] = [
-    {
-		year: '2017 - 2023',
-		name: 'FIRST BREATH AFTER COMA',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal and Spain',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-	{
-		year: '2019 - 2023',
-		name: 'FIRST BREATH AFTER COMA & NOISERV',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-	{
-		year: '2021 - 2023',
-		name: 'BRANKO',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal, France and UK',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-	{
-		year: '2022 - 2023',
-		name: 'INDIGNU',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-	{
-		year: '2023',
-		name: 'SANGUE SUOR',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-	{
-		year: '2023',
-		name: 'NEM SÓ DE PÃO - DISCOS PLATÃO',
-		team: undefined,
-		location: undefined,
-		city: 'Portugal',
-		type: 'LIGHT AND STAGE DESIGN'
-	},
-]
+export const LightAndStageBands: string[] = [
+	'FIRST BREATH AFTER COMA',
+	'FIRST BREATH AFTER COMA & NOISERV',
+	'BRANKO', 
+	'INDIGNU',
+	'SANGUE SUOR',
+	'NEM SÓ DE PÃO - DISCOS PLATÃO',
+	'THE RITE OF TRIO',
+	'GONGORI',
+	'ISA LEEN',
+	'PEDRO MAFAMA',
+	'SÍNCOPE', 
+	'PARAGUAII',
+	'VERDE PERTO - DISCOS PLATÃO',
+	'VOX HYSTÉRA - DISCOS PLATÃO',
+	'HOLLY',
+	'5ª PUNKADA',
+	'SIRICAIA',
+	`DINO D' SANTIGO`,
+	'SURMA',
+	'OS QUE NELE HABITAM - OUTRA VOZ',
+	'STEREOBOY',
+	'THE LEMON LOVERS',
+	'MEERA',
+	`GRANDFATHER'S HOUSE`,
+	'IVY',
+	'DEAR TELEPHONE'	
+].sort()

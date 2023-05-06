@@ -1,0 +1,6 @@
+- Infinite scroll subheaders
+- Vertical grid lines
+- Responsive grid lines
+- Animate grid lines
+- about page
+- Layout.tsx???

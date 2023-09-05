@@ -157,6 +157,26 @@
         linear-gradient(var(--primary-color), var(--primary-color));
 }
 
+.entryContainer::after {
+    content: '';
+    width: calc(100% + var(--grid-line-offset));
+    position: absolute;
+    left: calc(var(--grid-line-offset) / 2 * -1);
+    height: var(--grid-line-width);
+    background: linear-gradient(to right, var(--grid-line-color), var(--grid-line-color) 50%, transparent 0, transparent);
+    background-size: var(--grid-line-gap) var(--grid-line-width);
+
+    mask-composite: exclude;
+    mask:
+        linear-gradient(to left,
+            var(--secondary-color) var(--grid-line-fade-stop),
+            transparent),
+        linear-gradient(to right,
+            var(--secondary-color) var(--grid-line-fade-stop),
+            transparent),
+        linear-gradient(var(--primary-color), var(--primary-color));
+}
+
 .headerContainer::before {
     content: '';
     width: calc(100% + var(--grid-line-offset));

@@ -1,6 +1,7 @@
-- Infinite scroll subheaders
 - Vertical grid lines
 - Responsive grid lines
 - Animate grid lines
 - about page
 - Layout.tsx???
+- Add grid lines to entries???
+- Add last data from pdf

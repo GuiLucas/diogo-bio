@@ -19,6 +19,7 @@ const Home = () => {
 			<Section key={'ARCHITECTURAL'} title={'ARCHITECTURAL'} data={Data.Architectural} />
 			<Section key={'INSTALLATION'} title={'INSTALLATION'} data={Data.Instalations} />
 			<Section key={'LIVEAV'} title={'LIVE AV PERFORMANCE'} data={Data.LiveAvPerformance} />
+			<Section key={'SETDESIGNTEATHER'} title={'LIGHT DESIGN FOR THEATER'} data={Data.LightDesignTeather} />
 			<Section key={'SCENOGRAPHY'} title={'SCENOGRAPHY'} data={Data.Scenography} />
 			<Section key={'SETDESIGN'} title={'SET DESIGN'} data={Data.SetDesign} />
 		</main>

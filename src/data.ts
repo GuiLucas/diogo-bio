@@ -227,3 +227,51 @@ export const LightAndStageBands: string[] = [
 	'IVY',
 	'DEAR TELEPHONE'	
 ].sort()
+
+export const LightDesignTeather: Types.Entry[] = [
+	{
+		year: '2023',
+		name: 'BARKER X2',
+		team: 'by Renata Portas',
+		location: 'Teatro Municipal Campo Alegre',
+		city: 'Porto, PT',
+		type: 'LIGHT DESIGN TO THEATER / PERFORMANCE',
+		balance: true
+	},
+	{
+		year: '2023',
+		name: 'TREAT YOUR SELF!',
+		team: 'by Maria Luís Cardoso',
+		location: 'Centro de Artes de Lisboa',
+		city: 'Lisboa, PT',
+		type: 'LIGHT DESIGN TO THEATER / PERFORMANCE',
+		balance: true
+	},
+	{
+		year: '2022',
+		name: 'PARALLAX',
+		team: 'by Inês Garrido',
+		location: 'Ermo do Caos and CAL',
+		city: 'Porto e Lisboa, PT',
+		type: 'LIGHT DESIGN TO THEATER / PERFORMANCE',
+		balance: true
+	},
+	{
+		year: '2021',
+		name: 'DRAMATÍCULOS DE SAMUEL BECKETT',
+		team: 'by Renata Portas',
+		location: 'Teatro Municipal Rivoli',
+		city: 'Porto, PT',
+		type: 'LIGHT DESIGN TO THEATER / PERFORMANCE',
+		balance: true
+	},
+	{
+		year: '2019',
+		name: 'BALADA PARA FACAS, TALHERES, MOTOSSERAS E FANTASMAS',
+		team: 'by Renata Portas',
+		location: 'Teatro Municipal Rivoli',
+		city: 'Porto, PT',
+		type: 'LIGHT DESIGN TO THEATER / PERFORMANCE',
+		balance: true
+	},
+]
